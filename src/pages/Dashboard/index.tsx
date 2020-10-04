@@ -8,7 +8,7 @@ import Repository from '../Repository';
 
 import { Title, Form, Repositories, Error } from './styles';
 
-interface Repository {
+interface int_Repository {
   full_name: string;
   description: string;
   owner: {
@@ -20,7 +20,7 @@ interface Repository {
 const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
-  const [repositories, setRepositories] = useState<Repository[]>(() => {
+  const [repositories, setRepositories] = useState<int_Repository[]>(() => {
     const storageRepositories = localStorage.getItem(
       '@GithubExplorer:repositories',
     );
